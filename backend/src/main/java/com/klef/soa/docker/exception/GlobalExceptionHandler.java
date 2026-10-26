@@ -75,7 +75,8 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleMethodArgumentTypeMismatchException(
             MethodArgumentTypeMismatchException ex, HttpServletRequest request) {
         String paramName = ex.getName();
-        String expectedType = ex.getRequiredType() != null ? ex.getRequiredType().getSimpleName() : "valid type";
+        Class<?> requiredType = ex.getRequiredType();
+        String expectedType = (requiredType != null) ? requiredType.getSimpleName() : "valid type";
         String message = String.format("Parameter '%s' should be of type %s", paramName, expectedType);
         log.warn("Type mismatch on parameter {}: {}", paramName, ex.getMessage());
 

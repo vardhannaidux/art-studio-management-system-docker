@@ -9,6 +9,7 @@ import com.klef.soa.docker.repository.ArtStudioRepository;
 import com.klef.soa.docker.service.ArtStudioService;
 
 @Service
+@SuppressWarnings("null")
 public class ArtStudioServiceImpl implements ArtStudioService {
 
     private final ArtStudioRepository repository;

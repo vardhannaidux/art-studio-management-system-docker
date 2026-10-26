@@ -1,0 +1,233 @@
+/* ==========================================================================
+   ARTISTRY STUDIO — TABLE STYLES
+   ========================================================================== */
+
+.table-panel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--charcoal-100);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.table-toolbar {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--charcoal-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.table-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.table-search-box {
+  position: relative;
+  flex: 1;
+  max-width: 360px;
+}
+
+.table-search-input {
+  width: 100%;
+  padding: 0.55rem 2.25rem 0.55rem 2.4rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--charcoal-200);
+  background-color: var(--bg-surface-subtle);
+  font-size: 0.88rem;
+  color: var(--charcoal-900);
+  transition: all var(--transition-fast);
+}
+
+.table-search-input:focus {
+  background-color: var(--bg-surface);
+  border-color: var(--terracotta-500);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--terracotta-subtle);
+}
+
+.table-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--charcoal-400);
+  pointer-events: none;
+}
+
+.table-search-clear {
+  position: absolute;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--charcoal-400);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-full);
+}
+
+.table-search-clear:hover {
+  color: var(--charcoal-800);
+}
+
+.filter-pills-group {
+  display: inline-flex;
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--charcoal-100);
+  padding: 3px;
+  border-radius: var(--radius-sm);
+  gap: 2px;
+}
+
+.filter-pill {
+  border: none;
+  background: transparent;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-xs);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--charcoal-600);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.filter-pill:hover {
+  color: var(--charcoal-900);
+}
+
+.filter-pill.active {
+  background-color: var(--bg-surface);
+  color: var(--charcoal-900);
+  font-weight: 600;
+  box-shadow: var(--shadow-xs);
+}
+
+.filter-count {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-full);
+  background-color: var(--charcoal-100);
+  color: var(--charcoal-700);
+}
+
+.filter-pill.active .filter-count {
+  background-color: var(--terracotta-subtle);
+  color: var(--terracotta-500);
+}
+
+/* Table Responsive Container */
+.table-responsive-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.artistry-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.artistry-table th {
+  background-color: var(--bg-surface-subtle);
+  color: var(--charcoal-600);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--charcoal-200);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.artistry-table th.sortable {
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.artistry-table th.sortable:hover {
+  color: var(--charcoal-900);
+  background-color: var(--bg-surface-muted);
+}
+
+.th-sort-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.artistry-table td {
+  padding: 1.05rem 1.25rem;
+  border-bottom: 1px solid var(--charcoal-100);
+  color: var(--charcoal-700);
+  vertical-align: middle;
+}
+
+.artistry-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.artistry-table tbody tr:hover {
+  background-color: rgba(250, 247, 242, 0.7);
+}
+
+.artistry-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Columns specific formatting */
+.col-id {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--charcoal-500);
+  background-color: var(--bg-surface-subtle);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-xs);
+  display: inline-block;
+}
+
+.col-studio-name {
+  font-weight: 600;
+  color: var(--charcoal-900);
+}
+
+.col-rent {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--charcoal-900);
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+/* Table Footer Summary */
+.table-footer {
+  padding: 0.9rem 1.5rem;
+  background-color: var(--bg-surface-subtle);
+  border-top: 1px solid var(--charcoal-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--charcoal-500);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
